@@ -1,7 +1,7 @@
 const axios = require('axios');
 
-const BASE_URL = 'http://localhost:8000/'
-const RESOURCE = 'quotation/'
+const BASE_URL = process.env.API_BASE_URL + ":" + process.env.API_BASE_PORT
+const RESOURCE = '/quotation/'
 
 const getCurrencyQuotations = (limit=null) => {
     const api = axios.create({

@@ -24,7 +24,7 @@ class App extends Component {
         let dollar_data = []
         let euro_data = []
         
-        response.data.forEach(element => {
+        response.data.reverse().forEach(element => {
           bitcoin_data.push({x: element.collected_at, y: element.api_data.quotation_real.bitcoin.buy})
           dollar_data.push({x: element.collected_at, y: element.api_data.quotation_real.dollar.buy})
           euro_data.push({x: element.collected_at, y: element.api_data.quotation_real.euro.buy})
