@@ -16,4 +16,13 @@ const getCurrencyQuotations = (limit=null) => {
     return response;
 };
 
-export {getCurrencyQuotations}
+const getCurrencyVariations = () => {
+    const api = axios.create({
+        baseURL: BASE_URL+RESOURCE,
+    });
+
+    const response = api.get('currencyquotations/variation/');
+    return response;
+};
+
+export {getCurrencyQuotations, getCurrencyVariations}
